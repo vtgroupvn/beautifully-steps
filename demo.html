@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JQUERY Step plugin</title>
+<script type="text/javascript" src="asset/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="asset/js/abbora-step.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		var main_color = '#2C3D82';
+		var fn_step = jQuery('div#step-demo').beautifully_steps({
+			processbar_bg_width  : '100%',
+			processbar_bg_height : 5,
+			processbar_extra_style : {
+				'margin': 'auto',
+				'margin-top': '200px',
+				'border': '1px solid '+main_color,
+				'border-radius': '60%',
+				'-webkit-box-shadow': '0px 0px 5px -1px '+main_color,
+				'-moz-box-shadow':    '0px 0px 5px -1px '+main_color,
+				'box-shadow':         '0px 0px 5px -1px '+main_color,
+				'-webkit-border-radius': '6px',
+				'-moz-border-radius': '6px',
+			},
+			steps : [
+				{step: 1, text: 'step1', description: 'step1'},
+				{step: 2, text: 'step2', description: 'step2'},
+				{step: 3, text: 'step3', description: 'step3'},
+				{step: 4, text: 'step4', description: 'step4'},
+				{step: 5, text: 'step5', description: 'step5'}
+			],
+			step_style : {
+				'display': 'inline-block',
+				'background': main_color,
+				'text-align': 'center',
+				'font-size': '14px',
+				'color': 'yellow',
+				'line-height': '10px',
+				'cursor': 'pointer'
+			},
+			main_color: main_color,
+			animate_updte_step: true,
+			step_description_hint: true
+		});
+		fn_step.init();
+		fn_step.active_step(2);
+		fn_step.showHintItem(2);
+	});
+</script>
+</head>
+<body>
+<div id="step-demo"></div>
+</body>
+</html>
