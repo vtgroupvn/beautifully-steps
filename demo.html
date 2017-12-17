@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>JQUERY Step plugin</title>
 <script type="text/javascript" src="asset/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="asset/js/abbora-step.js"></script>
+<script type="text/javascript" src="asset/js/beautifully-step.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
 		var main_color = '#2C3D82';
@@ -23,32 +23,33 @@
 				'-moz-border-radius': '6px',
 			},
 			steps : [
-				{step: 1, text: 'step1', description: 'step1'},
-				{step: 2, text: 'step2', description: 'step2'},
-				{step: 3, text: 'step3', description: 'step3'},
-				{step: 4, text: 'step4', description: 'step4'},
-				{step: 5, text: 'step5', description: 'step5'}
+				{step: 1, text: 'Wake up', description: 'Wake up'},
+				{step: 2, text: 'Have breakfast', description: 'Have breakfast'},
+				{step: 3, text: 'Drink Coffee', description: 'Drink Coffee'},
+				{step: 4, text: 'Check something', description: 'Check something'},
+				{step: 5, text: 'Working', description: 'Working'}
 			],
 			step_style : {
 				'display': 'inline-block',
 				'background': main_color,
 				'text-align': 'center',
 				'font-size': '14px',
-				'color': 'yellow',
+				'color': main_color,
 				'line-height': '10px',
 				'cursor': 'pointer'
 			},
 			main_color: main_color,
-			animate_updte_step: true,
+			animate_update_step: true,
 			step_description_hint: true
 		});
 		fn_step.init();
-		fn_step.active_step(2);
-		fn_step.showHintItem(2);
+		fn_step.active_step(3);
+		fn_step.showHintStep(3);
 	});
 </script>
 </head>
 <body>
+<center><img src="asset/images/jquery-plugins.jpg" alt="jQuery Plugins"/></center>
 <div id="step-demo"></div>
 </body>
 </html>
